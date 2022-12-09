@@ -1,4 +1,4 @@
-let formulario= document.forms;
+let formulario = document.forms;
 
 function isEmpty(elemento){
     if(elemento){
@@ -10,6 +10,7 @@ function isEmpty(elemento){
 //si tengo ohm y amp falta vol ohm * amp = vol
 // si tengo amp y vol entonces vol / amp = ohm
 //si tengo ohm y vol entonces vol / ohm = amp
+//
 
 function calcularOhm(ohm, amp, vol){
     let resultado = "Oh NO!. "
@@ -31,7 +32,11 @@ function calcularOhm(ohm, amp, vol){
         mensaje=" Volts"
     }
 
-    return resultado + mensaje    
+    if(resultado !== 0){
+        //selecciono el elemento para agragale la respuesta
+        let miFormulario = document.getElementById("contenedorFormulario")
+        miFormulario.innerHTML += `<div class="col-12" style="background-color:lime">${resultado + mensaje}</div>`
+    }else return resultado + mensaje    
 }
 function llamar(){
     return calcularOhm(formulario[0].Ohm.value,formulario[0].Amp.value,formulario[0].Vol.value)

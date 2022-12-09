@@ -15,31 +15,34 @@
         </div>
       </div>
 
-        <div class="row justify-content-center" style="background-color: rgb(171, 122, 171);">
+      <div id="contenedorFormulario" class="row justify-content-center" style="background-color: rgb(171, 122, 171);">
 
         <div class="col-4">
-          <form>
+            <form event=preventDefault()>
 
-            <div style="background-color: red;">
-              <label for="Ohm">Ohmios</label><br>
-              <input type="number" id="Ohm"name="Ohmios">
-            </div>
+              <div style="background-color: red;">
+                <label for="Ohm">Ohmios</label><br>
+                <input type="number" id="Ohm"name="Ohmios">
+              </div>
 
-            <div style="background-color: blue;">
-              <label for="Amp">Amperes</label><br>
-              <input type="number" id="Amp"name="Amperes">
-            </div>
+              <div style="background-color: blue;">
+                <label for="Amp">Amperes</label><br>
+                <input type="number" id="Amp"name="Amperes">
+              </div>
 
-            <div style="background-color: green;">
-              <label for="Vol">Voltios</label><br>
-              <input type="number" id="Vol" name="Voltios">
-            </div>
+              <div style="background-color: green;">
+                <label for="Vol">Voltios</label><br>
+                <input type="number" id="Vol" name="Voltios">
+              </div>
+              <div>
+                <input type="submit" value="Enviar" onclick=llamar()>
+              </div>
+            </form>
                 
-            </div>
-          </form>
-        </div>
       </div>
 
+          
+      </div>
     </div>
 
 
